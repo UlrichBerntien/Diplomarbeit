@@ -1,0 +1,72 @@
+% Wertedatei für IRIS04.C : Auswertung der Spektren
+%
+% Datei in der die Ergebnisse der Auswertung geschrieben werden:
+B:\OUT.TXT
+% Datei in der Die Daten für die n(x) und T(x) Plots geschreiben werden
+D:IRIS_NT.PLT
+% Steuercodes für Drucker Fettschrift / Normalschrift (HPLJ)
+"\x1B(s3B"
+"\x1B(s0B"
+% Suchmethode zur Bestimmung der Linienbreite : vom Rand oder von Innen
+Innen
+% Bestimmen der Liniengrenzen : Automatisch oder Manuel
+Manuel
+% Wellenlängen-Differenz [nm] zwischen zwei Pixel
+0.0828
+% Tabelle von Graphen aus H.R.Griem : Plasma Spectroscopy , Seite 281, Figure 13-6
+% Temperatur [K]    Linienintensität / Kontinuumsintensität in 10 nm Intervall
+%                    für die Linien H alpha,  H beta,  H gamma
+15e3  214.1  57.37  21.21
+20e3  104.8  25.90  11.32
+25e3  76.61  19.47  8.267
+30e3  52.86  13.43  5.704
+40e3  32.54  8.267  3.511
+50e3  23.10  5.869  2.493
+60e3  17.36  4.412  1.874
+70e3  14.63  3.613  1.491
+80e3  12.33  2.959  1.330
+90e3  10.39  2.493  1.121
+ende
+% Temperaturvorgabe für die Berechnung C(Ne,Te) aus den folgenden Tabellen
+% falls der Wert > 0.0 ist wird der angegebene Wert als Elektronentemperatur
+% in Kelvin benutzt, sonst wird die berechnete Temperatur aus der Tabelle
+% oben benutzt
+40e3
+% Elektronendichte aus der Starkverbreiterung, Tabelle aus H.R.Griem
+% Daten der H - alpha Linie
+% die Temperaturen / K
+10e3
+20e3
+40e3
+ende
+% Dichte/cm^-3   Tafel mit C(Ne,Te,) / A^3/2cm^-3
+1e16  6.15e15  7.13e15  4.22e16
+1e17  3.61e15  3.88e15  6.01e15
+1e18  3.23e15  2.79e15  2.67e15
+1e19  3.00e15  2.15e15  0.95e15
+ende
+% Daten der H - beta Linie
+% die Temperaturen / K
+10e3
+20e3
+40e3
+ende
+% Dichte/cm^-3  Tafel mit C(Ne,Te) / A^3/2cm^-3
+1e14  3.80e14  3.72e14  3.76e14
+1e15  3.58e14  3.55e14  3.52e14
+1e16  3.30e14  3.21e14  3.30e14
+1e17  2.98e14  3.03e14  2.87e14
+1e18  2.80e14  2.75e14  2.75e14
+ende
+% Daten der H - gamma Linie
+% die Temperaturen / K
+10e3
+20e3
+40e3
+ende
+% Dichte/cm^-3  Tafel mit C(Ne,Te) / A^3/2cm^-3
+1e15  4.41e14  6.68e14  3.77e15
+1e16  2.90e14  3.01e14  3.46e14
+1e17  2.73e14  2.81e14  2.30e14
+1e18  2.60e14  2.70e14  1.85e14
+ende

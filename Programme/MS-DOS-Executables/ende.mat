@@ -1,0 +1,15 @@
+  Aufräumen nach einem Schuátag.
+  IRIS_OSZ.TXT wird zurückkopiert (es könnte geändert worden sein).
+  Alle OSZ-Files (mit den Daten von dem DSO Gould) werden mit
+  LHARC archiviert und auf Diskette gesichert.
+  Einen kurzen Kommentar zu den Daten in ASCII-File "OSZ" schreiben.
+c. copy IRIS_OSZ.TXT D:\USE\UB\*.*
+c! d:
+c! cd \USE\UB\OSZ
+e! LHARC a %02d%02M%02y *.OSZ
+o. Diskette zur Sicherung der archivierten OSZ-Files
+o! in Laufwerk A einlegen
+c. COPY %02d%02M%02y.lzh a:\osz\*.*
+c? DEL *.osz
+e. QBASIC /EDITOR osz.
+c. COPY osz a:\osz\osz

@@ -1,0 +1,37 @@
+#
+#  MAKE für Microsoft C V5.1
+#  .08.1994 Ulrich Berntien
+#
+#---------------------------------------------------------------------
+
+I286 = /G2s
+OPT  = /Ox
+
+C2OBJ = cl /c /W3 /AL $(I286) $(OPT)
+
+#---------------------------------------------------------------------
+
+all : imgview.exe
+
+#---------------------------------------------------------------------
+
+imgview.exe : imgview.obj ega.obj vga.obj svga.obj tseng.obj viewasm.obj
+  link imgview.obj+ega.obj+vga.obj+svga.obj+tseng.obj+viewasm.obj;
+
+imgview.obj : imgview.c imgview.h
+  $(C2OBJ) $*.c
+
+ega.obj : ega.c imgview.h
+  $(C2OBJ) $*.c
+
+vga.obj : vga.c imgview.h
+  $(C2OBJ) $*.c
+
+svga.obj : svga.c imgview.h
+  $(C2OBJ) $*.c
+
+tseng.obj : tseng.c imgview.h
+  $(C2OBJ) $*.c
+
+viewasm.obj : viewasm.asm
+  MASM /MX /DI8086L $*.asm;

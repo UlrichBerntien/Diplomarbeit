@@ -1,0 +1,99 @@
+#
+#  MAKE von Zortech C V2.1
+#  .02.1994 Ulrich Berntien
+#
+#---------------------------------------------------------------------
+
+TEMP = d:(_ztc_).tmp
+TEMO = d:(_ztc_).tmo
+I286 = -2
+OPT  = ztg $(TEMP)
+
+#---------------------------------------------------------------------
+
+OBJ2EXE = blink $** int.obj , $@ /noi
+
+C2OBJa = ztc1 -mc -r -p $(I286) -o$(TEMP)
+C2OBJb = $(OPT)
+C2OBJc = ztc2 $(TEMO) -o$@
+
+#---------------------------------------------------------------------
+
+all : img2bmp.exe img2pcx.exe img2gif.exe img2tiff.exe	\
+      bmp2img.exe pcx2img.exe gif2img.exe tiff2img.exe	\
+      genimg.exe
+
+#---------------------------------------------------------------------
+
+img2x.obj : img2x.c img2x.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+x2img.obj : x2img.c x2img.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+img2bmp.exe : img2x.obj 2bmp.obj
+  $(OBJ2EXE)
+2bmp.obj : 2bmp.c bmp.h img2x.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+bmp2img.exe : x2img.obj bmp2.obj
+  $(OBJ2EXE)
+bmp2.obj : bmp2.c bmp.h x2img.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+img2pcx.exe : img2x.obj 2pcx.obj
+  $(OBJ2EXE)
+2pcx.obj : 2pcx.c pcx.h img2x.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+pcx2img.exe : x2img.obj pcx2.obj
+  $(OBJ2EXE)
+pcx2.obj : pcx2.c pcx.h x2img.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+img2gif.exe : img2x.obj 2gif.obj
+  $(OBJ2EXE)
+2gif.obj : 2gif.c gif.h img2x.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+gif2img.exe : x2img.obj gif2.obj
+  $(OBJ2EXE)
+gif2.obj : gif2.c gif.h x2img.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+img2tiff.exe : img2x.obj 2tiff.obj
+  $(OBJ2EXE)
+2tiff.obj : 2tiff.c img2x.h tiff.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+tiff2img.exe : x2img.obj tiff2.obj
+  $(OBJ2EXE)
+tiff2.obj : tiff2.c x2img.h tiff.h
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)
+
+genimg.exe : genimg.obj
+  $(OBJ2EXE)
+genimg.obj : genimg.c
+  $(C2OBJa) $*.c
+  $(C2OBJb)
+  $(C2OBJc)

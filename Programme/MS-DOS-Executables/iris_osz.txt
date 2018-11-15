@@ -1,0 +1,17 @@
+; Namen für IRIS-Programm, (IRIS06) Datenübertragung Gould -> PC
+; Autocal nach Übertragung auslösen (OFF/ON)
+ON
+; Pfad zum Speichern der OSZ-Files
+D:
+; Namensextension der OSZ-Files
+OSZ
+; Name des Experiments
+Plasmajet
+; Signal auf 1. Kanal
+dI/dt Plasmajet, Splitter(Kameras), 20 dB
+; Signal auf 2. Kanal
+Photodiode, mit Linse (f=120mm), Sicht 5mm oberhalb der Düse
+; Signal auf 3. Kanal
+Std Ge:Au-Detektor
+; Signal auf 4. Kanal
+Kameras 08/15 ( Flanken = Öffnungszeitpunkte - 200 ns )
