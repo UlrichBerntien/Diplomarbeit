@@ -95,7 +95,7 @@ zum Erstellen des Programms IRIS.EXE und ein paar anderer Hilfsprogramme.
  PLOTOSZ.LNK  |  Response-File für MS-Link. Zusammenbauen von PLOTOSZ.EXE aus PLOTOSZ.OBJ und COMMON.LIB
  OSZ2COL.C    |  Eigenständiges Programm Ausgabe der Daten vom DSO Gould in eine ASCII-Text Datei, Die Werte aus den Kanälen 1-4 (Timebase A) werden in vier      Spalten als Dezimalzahlen 0..255 ausgegeben. Die *.OSZ Files werden vom Modul IRIS06.C oder vom Programm GOULD.C erzeugt. 
  IRIS_DC.C    |  Eigenständiges Programm Bild der Kamera 1 wird auf Monitor durchgestellt und ein Fadenkreuz eingeblendet.
- IRIS_DC.LNK  |  Repsonse-File für MS-Link. Zusammenbau von IRIS_DC.EXE
+ IRIS_DC.LNK  |  Response-File für MS-Link. Zusammenbau von IRIS_DC.EXE
  RS232.H      |  Headerfile zu RS232.C
  RS232.C      |  Behandlung der seriellen (RS-232) Schnittstelle. Einstellen der Schnittstellenparameter. Senden und Empfang von Zeichen (interrupt gesteuert).
  PLOT.H       |  Headerfile zu PLOT.C
