@@ -49,4 +49,4 @@ Diplomarbeit-2004.pdf | Diplomarbeit
 Programme | Erstellte Programme für Datenerfassung und Auswertung
 Bilder    | In der Arbeit enthaltene Bilder
 Text      | MS-Word und Libreoffice Writer Version der Diplomarbeit
-
+Ziped     | Die alten Dateien in ZIP Files archiviert
